@@ -39,7 +39,7 @@ Then go to `.\packages\STM32\hardware\stm32\<release version>\cores\arduino\stm3
 In the file add these lines of code:
 
 ```C
-	#if !defined(HAL_CRC_MODULE_ENABLED)
+    #if !defined(HAL_CRC_MODULE_ENABLED)
       #define HAL_CRC_MODULE_ENABLED
     #else
       #undef HAL_CRC_MODULE_ENABLED
