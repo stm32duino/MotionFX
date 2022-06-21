@@ -27,29 +27,11 @@ Expansion Board. It shows how to do the magnetometer hard iron calibration and d
 * Fusion9X_IKS02A1: This application provides a simple example of usage of the 9-axis fusion (accelerometer, gyroscope and magnetometer) with the X-NUCLEO-IKS02A1 
 Expansion Board. It shows how to do the magnetometer hard iron calibration and display on a hyperterminal the values of yaw, pitch and roll.
 
-## Setting CRC
-Up to [STM32 core](https://github.com/stm32duino/Arduino_Core_STM32) version 2.2.0 it is necessary to apply the following steps:
-
-Check where the Arduino `preferences.txt` file are in `Arduino IDE -> Preferences`.
-
-	For Example: `C:\Users\Duino\AppData\Local\Arduino15` (Windows)
-
-Then go to `.\packages\STM32\hardware\stm32\<release version>\cores\arduino\stm32\stm32yyxx_hal_conf.h` and open the file.
-
-In the file add these lines of code:
-
-```C
-    #if !defined(HAL_CRC_MODULE_ENABLED)
-      #define HAL_CRC_MODULE_ENABLED
-    #else
-      #undef HAL_CRC_MODULE_ENABLED
-    #endif
-```
-
 ## Note
 
-The MotionFX Library can be used on STM32 boards with ST MEMS sensors only. For more information, please give a look at the license terms.
-The MotionFX Library currently does not support the Cortex-M4 core of the STM32MP1xx devices. 
+The MotionFX library requires [STM32 core](https://github.com/stm32duino/Arduino_Core_STM32) version 2.3.0 or higher.
+The MotionFX library can be used on STM32 boards with ST MEMS sensors only. For more information, please give a look at the license terms.
+The MotionFX library currently does not support the Cortex-M4 core of the STM32MP1xx devices. 
 
 ## Dependencies
 
@@ -67,5 +49,5 @@ The MotionFX library requires the following STM32duino libraries:
 You can find the library files at
 https://github.com/stm32duino/MotionFX
 
-The MotionFX Library user manual is available at
+The MotionFX library user manual is available at
 https://www.st.com/content/ccc/resource/technical/document/user_manual/group0/31/0e/66/39/cb/f7/4e/cd/DM00394369/files/DM00394369.pdf/jcr:content/translations/en.DM00394369.pdf

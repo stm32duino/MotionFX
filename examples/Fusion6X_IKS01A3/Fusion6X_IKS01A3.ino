@@ -48,9 +48,6 @@ HardwareTimer *MyTim;
 
 volatile uint8_t fusion_flag;
 
-/* This variable can be removed when CRC will be integrated in the STM32duino Core */
-CRC_HandleTypeDef hcrc = {.Instance = CRC};
-
 void fusion_update(void)
 {
   fusion_flag = 1;
@@ -60,11 +57,6 @@ void setup() {
   /* Initialize Serial */
   Serial.begin(115200);
   while (!Serial) yield();
-
-  /* This initialization can be removed when CRC will be integrated in the STM32duino Core */
-  /* Initialize CRC */
-  HAL_CRC_Init(&hcrc);
-  __HAL_RCC_CRC_CLK_ENABLE();
 
   /* Initialize I2C bus */
   Wire.begin();
