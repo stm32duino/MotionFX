@@ -29,9 +29,10 @@ Expansion Board. It shows how to do the magnetometer hard iron calibration and d
 
 ## Note
 
-The MotionFX library requires [STM32 core](https://github.com/stm32duino/Arduino_Core_STM32) version 2.3.0 or higher.
-The MotionFX library can be used on STM32 boards with ST MEMS sensors only. For more information, please give a look at the license terms.
-The MotionFX library currently does not support the Cortex-M4 core of the STM32MP1xx devices. 
+* The MotionFX library requires [STM32 core](https://github.com/stm32duino/Arduino_Core_STM32) version 2.3.0 or higher.
+* The MotionFX library can be used on STM32 boards with ST MEMS sensors only. For more information, please give a look at the license terms.
+* The MotionFX library currently does not support the Cortex-M4 core of the STM32MP1xx devices.
+* The MotionFX library derives from STM32Cube MotionFX library v2.6.1.
 
 ## Dependencies
 
